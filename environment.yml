@@ -1,0 +1,15 @@
+name: lurker
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - nbstripout
+  - jupyter=1.0.0
+  - pytorch=1.0.0
+  - pylint
+  - torchvision=0.2.1
+  - yapf
+  - pip:
+    - pysc2
+    - torch==1.0.0

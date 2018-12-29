@@ -1,8 +1,8 @@
-build-game:
-	docker build -f dockerfiles/game.Dockerfile -t s2client-game .
+build-cpu-jupyter:
+	docker build -f dockerfiles/cpu-jupyter.Dockerfile -t lurker-cpu-jupyter .
 
-run-game:
-	docker run -P -d s2client-game
+build-game:
+	docker build -f dockerfiles/game.Dockerfile -t lurker-game .
 
 clean-exited:
 	docker rm `docker ps -qaf status=exited`
@@ -10,5 +10,10 @@ clean-exited:
 remove-all:
 	docker stop `docker ps -aq` && \
 	docker rm `docker ps -aq` && \
-	docker rmi `docker images -q`
- 
+	docker rmi `docker images -q`:w
+
+run-cpu-jupyter:
+	docker run -it -d lurker-cpu-jupyter
+
+run-game:
+	docker run -P -d lurker-game
