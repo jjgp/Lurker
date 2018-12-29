@@ -31,9 +31,3 @@ RUN wget http://blzdistsc2-a.akamaihd.net/Linux/SC2.${GAME_VERSION}.${BUILD_NUMB
     wget http://blzdistsc2-a.akamaihd.net/MapPacks/Melee.zip && \
     unzip -P iagreetotheeula Melee.zip -d ~/StarCraftII/Maps && \
     rm *.zip
-
-EXPOSE 12000
-
-ENTRYPOINT ~/StarCraftII/Versions/Base$BUILD_NUMBER/SC2_x64 \
-    -listen 0.0.0.0 \
-    -port 12000
