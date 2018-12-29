@@ -13,7 +13,4 @@ remove-all:
 	docker rmi `docker images -q`:w
 
 run-cpu-jupyter:
-	docker run -it -d lurker-cpu-jupyter
-
-run-game:
-	docker run -P -d lurker-game
+	docker run -it -p 8888:8888 lurker-cpu-jupyter
