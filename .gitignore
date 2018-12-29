@@ -5,3 +5,6 @@
 
 # Visual Studio Code related
 .vscode/
+
+# Jupyter
+.ipynb_checkpoints

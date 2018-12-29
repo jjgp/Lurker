@@ -10,7 +10,8 @@ clean-exited:
 remove-all:
 	docker stop `docker ps -aq` && \
 	docker rm `docker ps -aq` && \
-	docker rmi `docker images -q`:w
+	docker rmi `docker images -q`
 
+DIR := $(CURDIR)
 run-cpu-jupyter:
-	docker run -it -p 8888:8888 lurker-cpu-jupyter
+	docker run -it -p 8888:8888 -v $(DIR)/notebooks:/notebooks lurker-cpu-jupyter
