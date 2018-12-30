@@ -1,10 +1,5 @@
-# Miscellaneous
 *.pyc
 *.swp
 .DS_Store
-
-# Visual Studio Code related
-.vscode/
-
-# Jupyter
 .ipynb_checkpoints
+.vscode/
